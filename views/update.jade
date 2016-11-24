@@ -11,26 +11,27 @@ block content
                 
             h1.display-4.m-b-2 Nouveau mot de passe
             
-            form(method='POST' action='/insert')
+            form(method='POST' action="/update/#{doc._id}")
               div.form-group
                 label(for='title') Titre:
-                input#email.form-control(type='text', placeholder="Title" name='title')
+                input#email.form-control(type='text', placeholder="Title" name='title' , value="#{doc.title}")
 
               div.form-group
                 label(for='url') Url:
-                input#email.form-control(type='text', placeholder="Url du site" name='url')
+                input#email.form-control(type='text', placeholder="Url du site" name='url', value="#{doc.url}")
 
               div.form-group
                 label(for='username') Nom d'utilisateur:
-                input#email.form-control(type='text', placeholder="Nom" name='passname')
+                input#email.form-control(type='text', placeholder="Nom" name='passname', value="#{doc.passname}")
 
               div.form-group
                 label(for='username') Mot de passe:
-                input#email.form-control(type='text', placeholder="Mot de passe" name='password')
+                input#email.form-control(type='text', placeholder="Mot de passe" name='password', value="#{doc.password}")
 
               div.form-group
                 label(for='category') Categorie:
-                input#email.form-control(type='text', placeholder="Categorie" name='category')
+                input#email.form-control(type='text', placeholder="Categorie" name='category', value="#{doc.category}")
 
               button.btn.btn-primary(type='submit') Ajouter 
+
 

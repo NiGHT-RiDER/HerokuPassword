@@ -3,8 +3,14 @@ nav.navbar.navbar-default
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
         li
+          a(href='/home')
+            | Accueil
+        li
           a(href='/insert')
             | Nouveau mot de passe 
+        li
+          a(href='/logout')
+            | Deconnexion
       form.navbar-form.navbar-right(role='search')
         .form-group
           input.form-control(type='text', placeholder='Nom du Mot de passe')

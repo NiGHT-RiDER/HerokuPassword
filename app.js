@@ -27,9 +27,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var home = require('./routes/home');
-var login = require('./routes/login');
+var update = require('./routes/update');
+var insert = require('./routes/insert');
+var index  = require('./routes/index');
+var logout = require('./routes/logout');
+var remove = require('./routes/delete');
+var home   = require('./routes/home');
+var login  = require('./routes/login');
 var signup = require('./routes/signup');
 
 var app = express();
@@ -70,7 +74,11 @@ function isNotLogged(req, res, next) {
 }
         
 app.use('/login', isLogged, login);
+app.use('/logout', logout);
 app.use('/signup', isLogged, signup);
+app.use('/update', isNotLogged, update);
+app.use('/delete', isNotLogged, remove);
+app.use('/insert', isNotLogged, insert);
 app.use('/home', isNotLogged, home);
 app.use('/', index);
 

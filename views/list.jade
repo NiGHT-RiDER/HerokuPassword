@@ -12,6 +12,11 @@ table.table.table-striped.table-hover
      tr
       td #{doc.title}
       td #{doc.url} 
-      td #{doc.username} 
+      td #{doc.passname} 
       td #{doc.password} 
       td #{doc.category}
+      td 
+        a(href="/update/#{doc._id}") Modifier 
+      td 
+        a(href="/delete/#{doc._id}") Supprimer
+            
