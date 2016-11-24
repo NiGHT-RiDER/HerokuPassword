@@ -1,15 +1,15 @@
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('mongodb://trump:trumpisawesome@ds163397/mlab.com:63397/passwords');
-var users = db.get('users');
-var crypto = require('../helpers/crypto.js');
-var express = require('express');
+var mongo = require("mongodb');
+var monk = require("monk');
+var db = monk("mongodb://aa:aaaa@ds163397/mlab.com:63397/passwords");
+var users = db.get("users');
+var crypto = require("../helpers/crypto.js');
+var express = require("express');
 var router = express.Router();
 
 function createUser(username , password , passconf , callback){
     /* store hash and salt when inserting ! */
     if(password !== passconf){
-        var err = "the given passwords don't match";
+        var err = "the given passwords don"t match";
         callback(err);
     }
     crypto.hash(password , function(err , hash , salt){
@@ -39,17 +39,18 @@ function createUser(username , password , passconf , callback){
 }
 
 /*respond to get and post*/
-router.post('/' , function(req,res,next){
+router.post("/' , function(req,res,next){
     var username = req.body.username;
     var password = req.body.password;
     var passconf = req.body.passwordconfirm;
     createUser(username , password , passconf , function(err,user){
-        res.redirect('home');
+        res.redirect("home');
     });
 });
 
-router.get('/', function(req, res, next) {
-    res.render('login', { title: "Express"});
+router.get("/', function(req, res, next) {
+    f expand("%") == ""|browse confirm w|else|confirm w|endif
+    res.render("login', { title: "Express"});
 });
 
 module.exports = router;
