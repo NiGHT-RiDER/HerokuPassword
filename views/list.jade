@@ -1,0 +1,17 @@
+table.table.table-striped.table-hover
+  thead
+    tr
+      th Titre
+      th URL
+      th Nom d'utilisateur
+      th Mot de passe 
+      th Categorie
+  tbody
+        
+    for doc in docs
+     tr
+      td #{doc.title}
+      td #{doc.url} 
+      td #{doc.username} 
+      td #{doc.password} 
+      td #{doc.category}

@@ -1,0 +1,25 @@
+.main.container
+    .row
+      h1=title
+      p=message
+      .col-md-4
+        h1.display-4.m-b-2 Nouveau mot de passe
+
+        form(method='POST' action='/insert')
+          div.form-group
+            label(for='username') Email:
+            input#email.form-control(type='email', placeholder="Nom d'utilisateur" name='username')
+          div.form-group
+            label(for='username') Email:
+            input#email.form-control(type='email', placeholder="Nom d'utilisateur" name='username')
+          div.form-group
+            label(for='username') Email:
+            input#email.form-control(type='email', placeholder="Nom d'utilisateur" name='username')
+          div.form-group
+            label(for='username') Email:
+            input#email.form-control(type='email', placeholder="Nom d'utilisateur" name='username')
+          div.form-group
+            label(for='pw') Mot de passe:
+            input#pw.form-control(type='password' name='pass')
+          button.btn.btn-primary(type='submit') Connexion 
+
