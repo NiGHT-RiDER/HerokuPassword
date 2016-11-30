@@ -27,15 +27,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var update = require('./routes/update');
-var insert = require('./routes/insert');
-var index  = require('./routes/index');
-var logout = require('./routes/logout');
-var remove = require('./routes/delete');
-var home   = require('./routes/home');
-var login  = require('./routes/login');
-var signup = require('./routes/signup');
-
 var app = express();
 
 /*
@@ -58,7 +49,17 @@ app.use(express.static(path.join(__dirname, 'public')));
  * -- GERE LES ROUTES
  * --------------------------------
  */
-        
+ 
+var update = require('./routes/update');
+var insert = require('./routes/insert');
+var index  = require('./routes/index');
+var logout = require('./routes/logout');
+var remove = require('./routes/delete');
+var home   = require('./routes/home');
+var login  = require('./routes/login');
+var signup = require('./routes/signup');
+
+       
 function isLogged(req, res, next) {
     if (req.session.username)
         res.render('home', {title : "Express"});

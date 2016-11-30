@@ -1,6 +1,6 @@
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk("mongodb://aa:aaaa@ds163397.mlab.com:63397/passwords");
+var db = monk(process.env.MONGOLAB_URI);
 var users = db.get('passwords');
 var crypto = require('../helpers/crypto.js');
 var express = require('express');

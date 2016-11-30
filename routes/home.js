@@ -1,6 +1,6 @@
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk("mongodb://aa:aaaa@ds163397.mlab.com:63397/passwords");
+var db = monk(process.env.MONGOLAB_URI);
 var pass = db.get('passwords');
 var express = require('express');
 var router = express.Router();
