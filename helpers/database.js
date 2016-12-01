@@ -6,8 +6,8 @@
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk(process.env.MONGOLAB_URI);
-var pass = db.get('passwords');
-var users = db.get('users');
+var pas = db.get('passwords');
+var user = db.get('users');
 
 /*
  * -------------
@@ -21,6 +21,5 @@ var users = db.get('users');
  * -- EXPORTS
  * -----------
  */
-exports.db = db;
-exports.pass = pass;
-exports.users = users;
+exports.pass = pas;
+exports.users = user;
