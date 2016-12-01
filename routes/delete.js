@@ -1,7 +1,4 @@
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk(process.env.MONGOLAB_URI);
-var pass = db.get('passwords');
+var pass = require('../helpers/database.js').pass;
 var express = require('express');
 var router = express.Router();
 
